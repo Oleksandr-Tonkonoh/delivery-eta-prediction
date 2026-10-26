@@ -1,0 +1,26 @@
+# Secrets
+.env
+.env.*
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# MLflow local state
+mlflow.db
+mlflow_tracking/mlflow.db
+mlflow_tracking/mlartifacts/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

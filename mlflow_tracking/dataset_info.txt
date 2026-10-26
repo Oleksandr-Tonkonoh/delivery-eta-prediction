@@ -1,0 +1,5 @@
+Dataset: Delivery ETA Prediction
+Rows: 10000
+Target: delivery_minutes
+Split: 70/15/15
+Split type: chronological

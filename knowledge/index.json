@@ -1,0 +1,22 @@
+[
+  {
+    "source": "cancellation_policy.md",
+    "chunk_id": "cancellation_policy-1",
+    "text": "# Cancellation Policy\n\n## Cancellation requests\n\nCancellation availability depends on the current order status.\nCustomers should check the cancellation option displayed in the application.\n\n## Orders already being prepared\n\nAn order that is already being prepared may not be eligible for cancellation.\nThe customer should contact customer support if the cancellation option\nis unavailable.\n\n## Refunds\n\nRefund eligibility and processing time depend on the circumstances\nand the applicable order policy.\nCustomers should contact customer support for a decision about a specific order."
+  },
+  {
+    "source": "courier_faq.md",
+    "chunk_id": "courier_faq-1",
+    "text": "# Courier FAQ\n\n## How can I track an order?\n\nCustomers can use the order tracking page to see the latest available status.\n\n## Why is an order late?\n\nPossible reasons include traffic, bad weather, restaurant preparation time,\nand courier availability.\n\n## What should I do if the order status does not change?\n\nThe customer should contact customer support and provide the order reference.\n\n## Is the estimated delivery time guaranteed?\n\nNo. The estimated delivery time is a prediction and may change."
+  },
+  {
+    "source": "delivery_policy.md",
+    "chunk_id": "delivery_policy-1",
+    "text": "# Delivery Policy\n\n## Standard delivery\n\nStandard delivery is available for eligible orders.\nThe estimated delivery time depends on the delivery model's prediction\nand may change because of traffic, weather, restaurant preparation,\nand courier availability.\n\n## Delivery delays\n\nIf an order is delayed, the customer should check the latest order status.\nThe estimated delivery time is an estimate, not a guaranteed arrival time.\n\n## Order status\n\nThe customer should use the order tracking page to check the latest status.\nIf the status has not changed for an extended period, the customer should\ncontact customer support."
+  },
+  {
+    "source": "weather_delivery_guidelines.md",
+    "chunk_id": "weather_delivery_guidelines-1",
+    "text": "# Weather and Delivery Guidelines\n\n## Rain\n\nRain may slow courier travel and increase delivery time.\nCustomers should use the latest order tracking information.\n\n## Snow and ice\n\nSnow and icy roads may create unsafe travel conditions.\nCourier safety takes priority over delivery speed.\n\n## Severe weather\n\nDuring severe weather, deliveries may be delayed or temporarily unavailable.\nCustomers should check order status or contact customer support."
+  }
+]
