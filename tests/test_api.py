@@ -1,3 +1,6 @@
+from unittest.mock import patch 
+
+
 def test_health(client):
     response = client.get("/health")
 
@@ -30,14 +33,19 @@ def test_invalid_delivery(client, delivery):
     assert "errors" in delivery_data
 
 
-def test_explain_delivery(client, delivery):
-    response = client.post("/explain",
-                           json=delivery)
+@patch("genai.eta_explainer.generate_explanation_response")
+def test_explain_delivery(mock_explanation, client, delivery):
+    mock_explanation.return_value = "Expected delivery time is approximately 35 minutes."
+
+    response = client.post("/explain", json=delivery)
 
     delivery_data = response.json()
-    
+
     assert response.status_code == 200
     assert "predicted_delivery_minutes" in delivery_data
     assert delivery_data["predicted_delivery_minutes"] > 0
     assert "explanation" in delivery_data
+    assert delivery_data["explanation"] == (
+        "Expected delivery time is approximately 35 minutes."
+    )
 

@@ -1,19 +1,20 @@
-from fastapi.testclient import TestClient
 import pytest
-import mlflow
-import joblib
-from pathlib import Path
-from api.main import app
+from fastapi.testclient import TestClient
+from unittest.mock import patch
+
+with patch("mlflow.pyfunc.load_model") as mock_load_model:
+    mock_load_model.return_value.predict.return_value = [35.0]
+
+    from api.main import app
+
 
 @pytest.fixture
 def client():
-
     return TestClient(app)
 
 
 @pytest.fixture
 def delivery():
-    
     return {
         "distance_km": 5.2,
         "items_count": 3,
@@ -40,19 +41,14 @@ def delivery():
         "day_of_week_sin": 0.97,
         "day_of_week_cos": -0.22,
         "is_peak_hour": True,
-        "month": 5        
+        "month": 5,
     }
 
 
 @pytest.fixture
-def mlflow_model():
-    mlflow.set_tracking_uri("http://localhost:5000")
-
-    return mlflow.pyfunc.load_model("models:/delivery-eta-model/3")
-
-
-@pytest.fixture
 def joblib_model():
-    BASE_DIR = Path(__file__).resolve().parent.parent
+    import joblib
+    from pathlib import Path
 
-    return joblib.load(BASE_DIR / "models" / "final_model.pkl")
+    base_dir = Path(__file__).resolve().parent.parent
+    return joblib.load(base_dir / "models" / "final_model.pkl")
